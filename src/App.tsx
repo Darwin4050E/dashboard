@@ -11,6 +11,9 @@ import HeaderUI from './components/HeaderUI';
 // 10. Se importa el componente AlertUI. G13.
 import AlertUI from './components/AlertUI';
 
+
+import SelectorUI from './components/SelectoUI';
+
 function App() {
   // const [count, setCount] = useState(0)
 
@@ -29,7 +32,7 @@ function App() {
 
       {/* Selector */}
       <Grid size={{ xs: 12, md: 3 }}>
-        Elemento: Selector
+        <SelectorUI/>
       </Grid>
 
       {/* Indicadores */}
