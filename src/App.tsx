@@ -4,8 +4,12 @@
 import './App.css'
 
 import { Grid } from '@mui/material';
-// import HeaderUI from './components/HeaderUI';
 
+// 4. Se importa el componente HeaderUI. G13.
+import HeaderUI from './components/HeaderUI';
+
+// 10. Se importa el componente AlertUI. G13.
+import AlertUI from './components/AlertUI';
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -15,12 +19,12 @@ function App() {
 
       {/* Encabezado */}
       <Grid size={{ xs: 12, md: 12 }}>
-        Elemento: Encabezado
+        <HeaderUI/>
       </Grid>
 
       {/* Alertas */}
-      <Grid size={{ xs: 12, md: 12 }}>
-        Elemento: Alertas
+      <Grid size={{ xs: 12, md: 12 }} container justifyContent="right" alignItems="center">
+        <AlertUI description="No se preveen lluvias" severity="success" variant="outlined"/>
       </Grid>
 
       {/* Selector */}
