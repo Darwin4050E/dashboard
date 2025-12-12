@@ -6,11 +6,16 @@ import MenuItem from '@mui/material/MenuItem';
 
 import { useState } from 'react';
 
-function SelectorUI() {
+interface SelectorProps {
+    onOptionSelect: (option: string) => void;
+}
+
+function SelectorUI({onOptionSelect}: SelectorProps) {
     const [cityInput, setCityInput] = useState("");
     const handleChange = (event: SelectChangeEvent<string>) => {
         // window.alert(`Ciudad seleccionada: ${event.target.value}`);
         setCityInput(event.target.value);
+        onOptionSelect(event.target.value);
     }
     return (
         <FormControl fullWidth>
