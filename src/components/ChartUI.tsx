@@ -18,13 +18,13 @@ export default function ChartUI({dataFetcherOutput} : ChartUIProps) {
    return (
       <>
          <Typography variant="h5" component="div">
-            Temperatura & Velocidad del viento vs Horas
+            Temperatura y Velocidad del Viento por Horas
          </Typography>
          <LineChart
             height={300}
             series={[
-               { data: temperatures.slice(0,10), label: 'Temperatura'},
-               { data: vientos.slice(0,10), label: 'Velocidad del viento'},
+               { data: temperatures.slice(0,10), label: 'Temperatura (°C)'},
+               { data: vientos.slice(0,10), label: 'Vel. del viento (km/h)'},
             ]}
             xAxis={[{ scaleType: 'point', data: hours.slice(0,10) }]}
          />

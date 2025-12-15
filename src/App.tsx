@@ -14,6 +14,7 @@ import { type FetchDataOutput } from './functions/useFetchData';
 
 import TableUI from './components/TableUI';
 import ChartUI from './components/ChartUI';
+import CohereAssistantUI from './components/CohereAssistantUI';
 
 // 12. Se utiliza el custom hook. Ciertos componentes serán renderizados solo si ciertos valores del custom hook existen.
 
@@ -71,9 +72,9 @@ function App() {
         <TableUI dataFetcherOutput={dataFetcherOutput}/>
       </Grid>
 
-      {/* Información adicional */}
+      {/* Información adicional - Cohere Assistant */}
       <Grid size={{ xs: 12, md: 12 }}>
-        Elemento: Información adicional
+        <CohereAssistantUI weatherData={dataFetcherOutput} location={selectedOption || 'Ubicación actual'}/>
       </Grid>
 
     </Grid >

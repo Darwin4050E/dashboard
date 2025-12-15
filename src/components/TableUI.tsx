@@ -1,7 +1,6 @@
 import Box from '@mui/material/Box';
 import { DataGrid, type GridColDef } from '@mui/x-data-grid';
 import type { FetchDataOutput } from '../functions/useFetchData';
-import useFetchData from '../functions/useFetchData';
 
 interface TableUIProps {
     dataFetcherOutput: FetchDataOutput;
@@ -22,27 +21,27 @@ const columns: GridColDef[] = [
    { field: 'id', headerName: 'ID', width: 90 },
    {
       field: 'label',
-      headerName: 'Date',
+      headerName: 'Fecha',
       width: 125,
    },
    {
       field: 'label1',
-      headerName: 'Hour',
+      headerName: 'Hora',
       width: 125,
    },
    {
       field: 'value1',
-      headerName: 'Temperture',
+      headerName: 'Temperatura',
       width: 125,
    },
    {
       field: 'value2',
-      headerName: 'Wind Speed',
+      headerName: 'Vel. viento',
       width: 125,
    },
    {
       field: 'resumen',
-      headerName: 'Resume',
+      headerName: 'Resumen',
       description: 'No es posible ordenar u ocultar esta columna.',
       sortable: false,
       hideable: false,

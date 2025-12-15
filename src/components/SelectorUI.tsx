@@ -4,19 +4,22 @@ import InputLabel from '@mui/material/InputLabel';
 import Select, { type SelectChangeEvent } from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 interface SelectorProps {
     onOptionSelect: (option: string) => void;
 }
 
 function SelectorUI({onOptionSelect}: SelectorProps) {
-    const [cityInput, setCityInput] = useState("");
+    const [cityInput, setCityInput] = useState("guayaquil");
     const handleChange = (event: SelectChangeEvent<string>) => {
         // window.alert(`Ciudad seleccionada: ${event.target.value}`);
         setCityInput(event.target.value);
         onOptionSelect(event.target.value);
     }
+    useEffect(() => {
+        onOptionSelect('guayaquil');
+    }, [onOptionSelect]);
     return (
         <FormControl fullWidth>
             <InputLabel id="city-select-label">Ciudad</InputLabel>
