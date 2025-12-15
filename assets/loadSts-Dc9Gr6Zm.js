@@ -1,0 +1,1 @@
+import{yt as e}from"./index-CISaZRAx.js";import"./dist-es-Dtq_vcl3.js";import{a as t,m as n,t as r}from"./sts-BDEE0W7a.js";e((()=>{r()}))();export{t as AssumeRoleCommand,n as STSClient};
